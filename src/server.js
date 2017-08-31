@@ -32,6 +32,9 @@ const onRequest = (req, res) => {
     case '/dankmemes':
       imageHandler.getMeme(req, res);
       break;
+    case '/favicon.ico':
+      imageHandler.getIcon(req, res);
+      break;
     default:
       htmlHandler.getIndex(req, res);
       break;
