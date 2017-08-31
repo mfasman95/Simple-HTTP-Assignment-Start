@@ -8,8 +8,6 @@ const imageHandler = require('./imageResponses');
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
 const onRequest = (req, res) => {
-  console.log(req.url);
-
   switch (req.url) {
     case '/':
       htmlHandler.getIndex(req, res);
@@ -42,5 +40,7 @@ const onRequest = (req, res) => {
 };
 
 http.createServer(onRequest).listen(port, () => {
+  // Disabling next line because this console log is desired
+  //eslint-disable-next-line
   console.log(`Listening on 127.0.0.1:${port}`);
 });
