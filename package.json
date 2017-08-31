@@ -12,7 +12,8 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
+    "nodemon": "nodemon ./src/server.js",
     "pretest": "eslint ./src --fix",
     "test": "echo \"Tests complete\""
   }
